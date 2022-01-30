@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+ <%if(typeof type !='admin'){%>
+     <div class="ArkaPlan">
+        <div class="container">
+          <h2 class="baslik">Görevlerim Sayfasına Hoşgeldin <%=username_g%></h2>
+          <div class="row">
+              <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4" id="TamamlananGorevler">
+                <h3 class="tamamlananGorevBaslik">Tamamlanan Görevler</h3>
+                 <div class="container">
+                    <% Tamamlanangorev.forEach(x=>{%>
+                       <div class="row_gorev2">
+                          <ul>
+                              <li> Gorev id:<%=x.gorevId%></li>
+                              <li> Gorev adı:<%=x.gorevAdi%></li>
+                              <li> Gorev katagori:<%=x.kategori%></li>
+                              <li> Gorev açıklaması:<%=x.gorevAciklamasi%></li>
+                              <li> Gorev başlangıç tarihi:<%=x.baslangicTarihi%></li>
+                              <li> Gorev bitiş tarihi:<%=x.bitisTarihi%></li>
+                              <li> Gorev durumu:<%=x.durum%></li>
+                         </ul>
+                      </div>     
+                       <br>  
+                   <%})%>
+                </div>
+             </div>
+             <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4" id="DevamEdenGorevler">
+                <h3 class="devamGorevBaslik">Devam Eden Görevler</h3>
+                <div class="container">
+                    <% Devamedengorev.forEach(x=>{%>
+                       <div class="row_gorev">
+                         <ul>
+                              <li> Gorev id:<%=x.gorevId%></li>
+                              <li> Gorev adı:<%=x.gorevAdi%></li>
+                              <li> Gorev katagori:<%=x.kategori%></li>
+                              <li> Gorev açıklaması:<%=x.gorevAciklamasi%></li>
+                              <li>  Gorev başlangıç tarihi:<%=x.baslangicTarihi%></li>
+                              <li> Gorev bitiş tarihi:<%=x.bitisTarihi%></li>
+                              <li> Gorev durumu:<%=x.durum%></li>
+                         </ul>  
+                           <div class="text-center">
+                              <form action="/gorevler/devamPost" method="POST">
+                                <input type="hidden" class="form-control" name="gorevId" id="gorevId" value="<%=x.gorevId%>">
+                                <input type="hidden" class="form-control" name="gorevDurum" value="Tamamlandı">
+                                <div class="text-center">
+                                   <input type="submit" value="GÖREVİ TAMAMLA" class="btn btn-info btn-block">
+                               </div>
+                            </form>
+                          </div> 
+                      </div>     
+                       <br>    
+                   <%})%>
+                </div>
+             </div>
+              <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4" id="BeklenenGorevler">
+                <h3 class="beklenenGorevBaslik">Beklenen Görevler</h3>
+                 <div class="container">
+                    <% Beklemedegorev.forEach(x=>{%>
+                       <div class="row_gorev2">
+                          <ul>
+                              <li> Gorev id:<%=x.gorevId%></li>
+                              <li> Gorev adı:<%=x.gorevAdi%></li>
+                              <li> Gorev katagori:<%=x.kategori%></li>
+                              <li> Gorev açıklaması:<%=x.gorevAciklamasi%></li>
+                              <li>  Gorev başlangıç tarihi:<%=x.baslangicTarihi%></li>
+                              <li> Gorev bitiş tarihi:<%=x.bitisTarihi%></li>
+                              <li> Gorev durumu:<%=x.durum%></li>
+                         </ul>   
+                          <div class="text-center">
+                              <form action="/gorevler/bekleyenPost" method="POST">
+                                 <input type="hidden" class="form-control" name="gorevId" id="gorevId" value="<%=x.gorevId%>">
+                                 <input type="hidden" class="form-control" name="gorevDurum" value="Devam Ediyor">
+                                 <div class="text-center">
+                                    <input type="submit" value="GÖREVE BAŞLA" class="btn btn-info btn-block">
+                                 </div>
+                              </form>
+                         </div>  
+                      </div>  
+                       <br>
+                   <%})%>
+                 </div>
+              </div>
+           </div>
+        </div>
+     </div>
+  <%}%>
+</body>
+</html>

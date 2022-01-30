@@ -1,0 +1,71 @@
+.baslik{
+    width: 100%;  
+ padding-top: 15px;  
+ padding-bottom: 15px; 
+ color: #182153; 
+ background-color: #ececec; 
+padding-left: 150px;
+background-position: center;
+
+
+box-shadow: 0px 1px 2px 1px #b3b2b2;
+}
+.ArkaPlan{
+    background-color: #e0dfdf;   
+    height: 100%;
+}
+#TamamlananGorevler{
+    margin-top: 50px;
+    width: 100%; 
+    background-color: #badae7; 
+    box-shadow: 0px 2px 3px 2px #b3b2b2;
+    font-size: 16px;
+    color: #272f5e; 
+}
+#TamamlananGorevler:hover{
+    color: #07374b;
+    background-color:#dae1e4; 
+     
+}
+.tamamlananGorevBaslik{
+    color: #182153; 
+}
+.devamGorevBaslik{
+    color: #182153;
+}
+.beklenenGorevBaslik{
+    color: #182153;
+}
+#DevamEdenGorevler{
+    margin-top: 50px;
+    width: 100%; 
+    background-color: #90c6dd; 
+    box-shadow: 0px 1px 2px 1px #b3b2b2;
+    color: #131e57; 
+}
+#DevamEdenGorevler:hover{
+    color: #07374b;
+    background-color:#dae1e4; 
+}
+#BeklenenGorevler{
+    margin-top: 50px;
+    width: 100%; 
+    background-color:  #badae7; 
+    box-shadow: 0px 1px 2px 1px #b3b2b2;
+    color: #272f5e; 
+}
+#BeklenenGorevler:hover{
+    color: #07374b;
+    background-color:#dae1e4; 
+     
+}
+.row_gorev{
+    background: #9fd9f1;
+    padding: 5px 4px 3px 4px;
+    border-radius: 5px;
+}
+.row_gorev2{
+    background: #90c6dd;
+    padding: 5px 4px 3px 4px;
+    border-radius: 5px;
+}

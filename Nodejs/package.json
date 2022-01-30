@@ -1,0 +1,15 @@
+{
+    "name": "nodejsodev",
+    "version": "1.0.0",
+    "scripts": {
+        "start": "nodemon app.js"
+    },
+    "dependencies": {
+        "body-parser": "^1.19.0",
+        "ejs": "^3.1.5",
+        "express": "^4.17.1",
+        "express-ejs-layouts": "^2.5.0",
+        "express-session": "^1.17.1",
+        "node-localstorage": "^2.1.6"
+    }
+}

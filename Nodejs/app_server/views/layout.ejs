@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet" href="/public/css/style.css">
+     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <title>Document</title>
+ 
+</head>
+<body>
+  <%if(username_g !='' && username_g!=undefined){%>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark static-top">
+      <div class="container">
+        <a class="navbar-brand" href="#">
+          <img src="/public/img/Logo.jpg" />
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+          <ul class="navbar-nav ml-auto">
+           <li class="nav-item active" id="gorevler">
+             <a class="nav-link" href="/gorevler">Görevlerim
+               <span class="sr-only">(current)</span>
+             </a>
+           </li>
+            <li class="nav-item" id="gorevekle">
+              <a class="nav-link" href="/gorevekle">Görev Ekle</a>
+            </li>
+           <li class="nav-item">
+              <a class="nav-link" href="/cikis">Çıkış</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+ <%}%>
+ <%-body%>
+  <script type="text/javascript" src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+  <script type="text/javascript" src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js"></script>
+  <script src="/public/js/main.js"></script>
+</body>
+
+</html>
